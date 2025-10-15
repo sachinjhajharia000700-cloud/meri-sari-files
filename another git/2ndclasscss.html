@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*element selector */
+        div{
+            background-color: bisque;
+        }
+        /*class selector*/
+        .red{
+            background-color: aqua;
+        }
+        /* id selector*/
+#green{
+    background-color: blue;
+}
+/* chil selector*/
+div > p {
+    background: rgb(77, 71, 71);
+}
+/* desendent selector*/
+div p{
+    background: magenta;
+}
+/* universal selector */
+*{
+    margin: 30;
+    padding: 48px;
+}
+/*pseudo selector*/
+a:visited{
+    color: yellow
+}
+    </style>
+</head>
+<body>
+    <div class="red">
+        this s a selector class 
+        <p>
+             i am a para of div 
+        </p>
+    </div>
+    <div>
+        this is also a selector class
+    </div>
+    <div id="green">
+        this is also a  another class selec tor class 
+    </div>
+    <div>
+    <a href="https//www.google.com">go to google</a>
+    </div>
+</body>
+</html>
