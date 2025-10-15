@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="p.css" />
+  </head>
+  <body>
+    <form
+      action="#"
+      onsubmit="return validateForm(event)"
+      id="form"
+      style="
+        max-width: 400px;
+        margin: 40px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+      "
+    >
+      <h2 class="heading">
+        <b>Submit me please <span class="emoji">👇</span></b>
+      </h2>
+
+      <label for="profile">Profile</label>
+      <input type="file" id="profile" required accept="image/*" />
+      <img
+        id="preview"
+        src=""
+        alt="Selected Image"
+        style="display: none; width: 100px; margin: 10px 0"/>
+      <span id="profileError"></span>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <span id="nameError"></span>
+
+      <label for="lastName">Last Name</label>
+      <input
+        type="text"
+        id="lastName"
+        placeholder="Enter your last name"
+        required
+      />
+      <span id="lastNameError"></span>
+
+      <label for="mobileNumber">Mobile Number</label>
+      <input
+        type="tel"
+        id="mobileNumber"
+        placeholder="Enter your mobile number"
+        pattern="[0-9]{10,}"
+        required
+      />
+      <span id="mobileNumberError"></span>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <span id="emailError"></span>
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        required
+      />
+      <span id="passwordError"></span>
+
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        placeholder="Confirm your password"
+        required
+      />
+      <span id="confirmPasswordError"></span>
+
+      <label for="country">Country</label>
+      <input
+        list="countries"
+        id="country"
+        name="country"
+        placeholder="Select or type country"
+        required
+      />
+      <span id="countryError"></span>
+      <datalist id="countries">
+        <option value="Afghanistan"></option>
+        <option value="Albania"></option>
+        <option value="Algeria"></option>
+        <option value="Andorra"></option>
+        <option value="Angola"></option>
+        <option value="Argentina"></option>
+        <option value="Australia"></option>
+        <option value="Austria"></option>
+        <option value="Bahamas"></option>
+        <option value="Bahrain"></option>
+        <option value="Bangladesh"></option>
+        <option value="Belgium"></option>
+        <option value="Bhutan"></option>
+        <option value="Brazil"></option>
+        <option value="Bulgaria"></option>
+        <option value="Cambodia"></option>
+        <option value="Canada"></option>
+        <option value="Chile"></option>
+        <option value="China"></option>
+        <option value="Colombia"></option>
+        <option value="Croatia"></option>
+        <option value="Cyprus"></option>
+        <option value="Czech Republic"></option>
+        <option value="Denmark"></option>
+        <option value="Egypt"></option>
+        <option value="Finland"></option>
+        <option value="France"></option>
+        <option value="Germany"></option>
+        <option value="Greece"></option>
+        <option value="Hungary"></option>
+        <option value="Iceland"></option>
+        <option value="India"></option>
+        <option value="Indonesia"></option>
+        <option value="Iran"></option>
+        <option value="Iraq"></option>
+        <option value="Ireland"></option>
+        <option value="Israel"></option>
+        <option value="Italy"></option>
+        <option value="Japan"></option>
+        <option value="Kenya"></option>
+        <option value="Malaysia"></option>
+        <option value="Mexico"></option>
+        <option value="Nepal"></option>
+        <option value="Netherlands"></option>
+        <option value="New Zealand"></option>
+        <option value="Nigeria"></option>
+        <option value="Norway"></option>
+        <option value="Oman"></option>
+        <option value="Pakistan"></option>
+        <option value="Peru"></option>
+        <option value="Philippines"></option>
+        <option value="Poland"></option>
+        <option value="Portugal"></option>
+        <option value="Qatar"></option>
+        <option value="Romania"></option>
+        <option value="Russia"></option>
+        <option value="Saudi Arabia"></option>
+        <option value="Singapore"></option>
+        <option value="South Africa"></option>
+        <option value="Spain"></option>
+        <option value="Sri Lanka"></option>
+        <option value="Sweden"></option>
+        <option value="Switzerland"></option>
+        <option value="Thailand"></option>
+        <option value="Turkey"></option>
+        <option value="Ukraine"></option>
+        <option value="United Arab Emirates"></option>
+        <option value="United Kingdom"></option>
+        <option value="United States"></option>
+        <option value="Vietnam"></option>
+      </datalist>
+
+      <label for="state">State</label>
+      <input type="text" id="state" placeholder="Enter your state" required />
+      <span id="stateError"></span>
+
+      <label for="city">City</label>
+      <input type="text" id="city" placeholder="Enter your city" required />
+      <span id="cityError"></span>
+
+      <label for="zipCode">Zip Code</label>
+      <input
+        type="number"
+        id="zipCode"
+        placeholder="Enter your zip code"
+        required
+      />
+      <span id="zipCodeError"></span>
+
+      <label for="address">Address</label>
+      <input
+        type="text"
+        id="address"
+        placeholder="Enter your address"
+        required
+      />
+      <span id="addressError"></span>
+
+      <label>Gender</label><br />
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" required />
+      <label for="other">Other</label>
+      <span id="genderError"></span>
+
+      <br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last Name</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Country</th>
+          <th>State</th>
+          <th>City</th>
+          <th>Zip Code</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+  
+
+    <script src="p.js"></script>
+  </body>
+</html>
