@@ -1,0 +1,9 @@
+.lala{
+    height: 100px;
+    width: 100px;
+    background-image: url(png1.jpg);
+    background-size: cover;
+    position: fixed;
+    right:0px;
+    top: 0px;
+}

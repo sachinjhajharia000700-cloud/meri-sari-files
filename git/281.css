@@ -1,0 +1,24 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+#prithviraj{
+    text-align: center;
+    text-shadow: 2px 3px 2px red;
+}
+.main{
+    border: 1px solid rgb(133, 97, 97);
+    display: flex;
+
+}
+.image
+{
+    width: 30%;
+    height: 50%;
+}
+p{
+   text-align: justify;
+    color: rgb(174, 225, 124);
+    text-indent: 2em;
+}
